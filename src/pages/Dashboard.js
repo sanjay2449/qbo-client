@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import AddFileModal from "../components/AddFileModal";
+import Loader from "../components/Loader";
 
 export default function Dashboard() {
   const [user, setUser] = useState(null);
