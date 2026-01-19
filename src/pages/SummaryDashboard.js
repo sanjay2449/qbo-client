@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import Loader from "../components/Loader";
 
 export default function SummaryDashboard() {
     const { fileId } = useParams();
@@ -102,7 +103,8 @@ export default function SummaryDashboard() {
     const [moduleDates, setModuleDates] = useState({});
 
 
-    if (!file || !user) return <p className="p-10">Loading...</p>;
+   // if (!file || !user) return <p className="p-10">Loading...</p>;
+    if (!file || !user) return <Loader />;
 
 
     const fetchModuleSummary = async (realmId) => {
