@@ -96,8 +96,9 @@ export default function Dashboard() {
     }
   };
 
-  if (!user) return <p className="p-10">Loading...</p>;
-
+  //if (!user) return <p className="p-10">Loading...</p>;
+  if (!user) return <Loader />;
+    
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* SIDEBAR */}
